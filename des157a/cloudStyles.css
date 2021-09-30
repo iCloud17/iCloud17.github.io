@@ -1,0 +1,112 @@
+.cloud {
+    border-radius: 100%;
+    position: absolute;
+    animation: cloudShimmer linear infinite alternate;
+    background-color: #2F4A55;
+}
+
+#cloud1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0.75);
+}
+
+#cloud2 {
+    position: absolute;
+    top: 30px;
+    left: 70px;
+    transform: scale(0.75);
+}
+
+#cloud2 div {
+    animation-delay: 839ms;
+}
+
+.cloudCircle1 {
+    width: 70px;
+    height: 70px;
+    top: 10px;
+    left: 50px;
+    /* background-color: #3C5467; */
+    animation-duration: 1701ms;
+    opacity: 91%;
+}
+
+.cloudCircle2 {
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    left: 20px;
+    /* background-color: #4B5054; */
+    animation-duration: 1203ms;
+    opacity: 92%;
+}
+
+.cloudCircle3 {
+    width: 100px;
+    height: 100px;
+    top: 40px;
+    left: 20px;
+    /* background-color: #315669; */
+    animation-duration: 1804ms;
+    opacity: 93%;
+}
+
+.cloudCircle4 {
+    width: 67px;
+    height: 67px;
+    top: 10px;
+    left: 100px;
+    /* background-color: #203B49; */
+    animation-duration: 1150ms;
+    opacity: 94%;
+}
+
+.cloudCircle5 {
+    width: 120px;
+    height: 120px;
+    top: 40px;
+    left: 90px;
+    /* background-color: #114B68; */
+    animation-duration: 2s;
+    opacity: 95%;
+}
+
+.cloudCircle6 {
+    width: 120px;
+    height: 120px;
+    top: 40px;
+    left: 90px;
+    /* background-color: #114B68; */
+    animation-duration: 1410ms;
+    opacity: 96%;
+}
+
+.cloudCircle7 {
+    width: 110px;
+    height: 90px;
+    top: 10px;
+    left: 140px;
+    /* background-color: #072C3D; */
+    animation-duration: 1630ms;
+    opacity: 97%;
+}
+
+.cloudCircle8 {
+    width: 110px;
+    height: 110px;
+    top: 50px;
+    left: 170px;
+    /* background-color: #2C3539; */
+    animation-duration: 1315ms;
+    opacity: 98%;
+}
+
+@keyframes cloudShimmer {
+    to {
+        /* background-color: #8098A2; */
+        background-color: #3E5964;
+        opacity: 95%;
+    }
+}
