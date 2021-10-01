@@ -1,18 +1,18 @@
-body {
-    color: white;
+header{
+    display: inline-block;
 }
 
-#containerView {
+body {
+    color: white;
+    background-color: #2d2d2d;
     width: 100%;
     height: 768px;
     min-width: 800px;
     max-width: 1366px;
     max-height: 768px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     padding: 15px;
     margin: auto;
-    /* display: flex; */
-    /* flex-direction: column; */
 }
 
 #banner {
@@ -20,7 +20,7 @@ body {
     height: 250px;
     border: 1px solid white;
     position: relative;
-    margin: 30px auto;
+    margin: 0px auto;
     flex: 3;
 }
 
@@ -29,8 +29,7 @@ body {
     display: flex;
     flex-direction: row;
     text-align: center;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin: 0;
     border: 1px dashed white;
     /* flex: 1; */
 }
@@ -45,16 +44,54 @@ body {
 
 #mainCol div {
     flex: 1;
-    width: 33%;
     margin: 20px 50px;
     border: 2px solid white;
     border-radius: 7px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#mainCol ul {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    padding-left: 25%;
+    padding-right: 25%;
+    text-align: center;
+    align-items: center;
+}
+
+#mainCol li {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    /* border: 1px solid seagreen; */
 }
 
 a {
     color: white;
+    display: block;
+    font-size: 17px;
+    padding: 10px;
+    border: 4px solid transparent;
+}
+
+a:hover {
+    border: 4px solid steelblue;
 }
 
 footer {
     margin-top: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+footer a {
+    display: inline-block;
+    flex: 1;
+    text-align: center;
+    margin: 0 50px;
 }

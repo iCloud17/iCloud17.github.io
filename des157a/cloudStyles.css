@@ -110,3 +110,12 @@
         opacity: 95%;
     }
 }
+
+
+
+#rain {
+    position: absolute;
+    left: 40px;
+    top: 150px;
+    border: 1px solid seagreen;
+}
