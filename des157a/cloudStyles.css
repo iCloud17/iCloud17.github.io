@@ -23,6 +23,28 @@
     animation-delay: 839ms;
 }
 
+#cloud3 {
+    position: absolute;
+    top: -5px;
+    left: 120px;
+    transform: scale(0.75);
+}
+
+#cloud3 div {
+    animation-delay: 1237ms;
+}
+
+#cloud4 {
+    position: absolute;
+    top: 13px;
+    left: 200px;
+    transform: scale(0.75);
+}
+
+#cloud4 div {
+    animation-delay: 737ms;
+}
+
 .cloudCircle1 {
     width: 70px;
     height: 70px;
@@ -109,13 +131,4 @@
         background-color: #3E5964;
         opacity: 95%;
     }
-}
-
-
-
-#rain {
-    position: absolute;
-    left: 40px;
-    top: 150px;
-    border: 1px solid seagreen;
 }

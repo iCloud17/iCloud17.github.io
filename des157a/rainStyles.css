@@ -1,0 +1,136 @@
+.rain {
+    position: absolute;
+    left: 3%;
+    top: 50%;
+    opacity: 0%;
+    animation-name: rainfall1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.rainPath {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#rainPath1 {
+    top: -7px;
+    left: 0;
+}
+
+#rainPath1 .rain {
+    animation-delay: 0ms;
+}
+
+#rainPath1 .rainSecond {
+    animation-delay: 1500ms;
+}
+
+#rainPath2 {
+    top: -15px;
+    left: 3%;
+}
+
+#rainPath2 .rain {
+    animation-delay: 711ms;
+}
+
+#rainPath2 .rainSecond {
+    animation-delay: 1945ms;
+}
+
+#rainPath3 {
+    top: 0px;
+    left: 6%;
+}
+
+#rainPath3 .rain {
+    animation-delay: 373ms;
+}
+
+#rainPath3 .rainSecond {
+    animation-delay: 2113ms;
+}
+
+#rainPath4 {
+    top: 10px;
+    left: 9%;
+}
+
+#rainPath4 .rain {
+    animation-delay: 1413ms;
+}
+
+#rainPath4 .rainSecond {
+    animation-delay: 3311ms;
+}
+
+#rainPath5 {
+    top: -32px;
+    left: 13%;
+}
+
+#rainPath5 .rain {
+    animation-delay: 101ms;
+}
+
+#rainPath5 .rainSecond {
+    animation-delay: 1352ms;
+}
+
+#rainPath6 {
+    top: -15px;
+    left: 16.5%;
+}
+
+#rainPath6 .rain {
+    animation-delay: 2531ms;
+}
+
+#rainPath6 .rainSecond {
+    animation-delay: 4407ms;
+}
+
+#rainPath7 {
+    top: 0px;
+    left: 20%;
+}
+
+#rainPath7 .rain {
+    animation-delay: 2000ms;
+}
+
+#rainPath7 .rainSecond {
+    animation-delay: 3800ms;
+}
+
+@keyframes rainfall1 {
+    0% {
+        left: 5%;
+        top: 50%;
+        opacity: 100%;
+    }
+    33% {
+        left: 6.5%;
+        top: 66%;
+        transform: matrix(1.08,0.03,1.00,0.70,0,0);
+    }
+    66% {
+        left: 4.5%;
+        top: 79%;
+        transform: matrix(-0.81,-0.59,0.99,-0.52,0,0);
+    }
+    /* 75% {
+        left: 3.5%;
+        top: 86%;
+        transform: matrix(0.14,0.14,0.21,-0.21,0,-2);
+    } */
+    100% {
+        left: 5%;
+        top: 100%;
+        opacity: 0%;
+    }
+}
