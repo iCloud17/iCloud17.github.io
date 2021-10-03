@@ -1,3 +1,10 @@
+#megaRainPath1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 3%;
+}
+
 .rain {
     position: absolute;
     left: 3%;
@@ -12,8 +19,8 @@
 
 .rainPath {
     position: absolute;
+    width: 70%;
     height: 100%;
-    width: 100%;
 }
 
 #rainPath1 {
