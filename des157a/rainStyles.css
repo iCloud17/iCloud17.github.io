@@ -1,8 +1,32 @@
-#megaRainPath1 {
+.megaRainPath {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    box-sizing: border-box;
+    height: 90%;
+}
+
+#megaRainPath1 {
     left: 3%;
+    box-sizing: border-box;
+    width: 100%;
+    left: 0;
+}
+
+#megaRainPath2 {
+    left: 35%;
+    box-sizing: border-box;
+    width: 100%;
+    transform: translateZ(600px);
+}
+
+#megaRainPath3 {
+    left: 75%;
+    box-sizing: border-box;
+    width: 100%;
+    transform: translateZ(-300px);
+}
+
+#megaRainPath3 .rainPath{
+    width: max-content;
 }
 
 .rain {
@@ -10,7 +34,7 @@
     left: 3%;
     top: 50%;
     opacity: 0%;
-    animation-name: rainfall1;
+    animation-name: rainfallSway1;
     animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -114,7 +138,7 @@
     animation-delay: 3800ms;
 }
 
-@keyframes rainfall1 {
+@keyframes rainfallSway1 {
     0% {
         left: 5%;
         top: 50%;
@@ -130,14 +154,34 @@
         top: 79%;
         transform: matrix(-0.81,-0.59,0.99,-0.52,0,0);
     }
-    /* 75% {
-        left: 3.5%;
-        top: 86%;
-        transform: matrix(0.14,0.14,0.21,-0.21,0,-2);
-    } */
     100% {
         left: 5%;
         top: 100%;
         opacity: 0%;
+        width: max-content;
+    }
+}
+
+@keyframes rainfallSway2 {
+    0% {
+        left: 5%;
+        top: 50%;
+        opacity: 100%;
+    }
+    33% {
+        left: 6.5%;
+        top: 66%;
+        transform: matrix(1.08,0.03,1.00,0.70,0,0);
+    }
+    66% {
+        left: 4.5%;
+        top: 79%;
+        transform: matrix(-0.81,-0.59,0.99,-0.52,0,0);
+    }
+    100% {
+        left: 5%;
+        top: 100%;
+        opacity: 0%;
+        width: max-content;
     }
 }
