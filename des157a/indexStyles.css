@@ -190,6 +190,9 @@ footer a:hover {
         left: 0;
         opacity: 0;
     }
+    80% {
+        opacity: 100%;
+    }
     100% {
         left: 35%;
         opacity: 60%;
@@ -216,6 +219,9 @@ footer a:hover {
         opacity: 0;
         width: 100%;
     }
+    80% {
+        opacity: 100%;
+    }
     100% {
         left: 35%;
         opacity: 60%;
@@ -223,7 +229,7 @@ footer a:hover {
 }
 
 #banner:hover #megaCloud3{
-    animation: cloudWind3 linear infinite forwards;
+    animation: cloudWind3 ease-out infinite forwards;
     animation-duration: 23s;
 }
 
@@ -232,42 +238,48 @@ footer a:hover {
         left: 70%;
         opacity: 30%;
     }
-    33% {
-        left: 72%;
+    10% {
+        left: 73%;
         opacity: 0;
     }
-    34% {
+    11% {
         left: 0;
         opacity: 0;
     }
+    70% {
+        opacity: 100%;
+    }
     100% {
         left: 70%;
-        opacity: 50%;
+        opacity: 30%;
     }
 }
 
 #banner:hover #megaRainPath3{
-    animation: rainWind3 linear infinite forwards;
+    animation: rainWind3 ease-out infinite forwards;
     animation-duration: 23s;
 }
 
 @keyframes rainWind3 {
     0% {
         left: 75%;
-        opacity: 100%;
+        opacity: 30%;
     }
-    33% {
+    10% {
         left: 80%;
         opacity: 0;
         width: 50%;
     }
-    34% {
-        left: 0;
+    11% {
+        left: 10%;
         opacity: 0;
         width: 100%;
     }
+    70% {
+        opacity: 100%;
+    }
     100% {
         left: 75%;
-        opacity: 60%;
+        opacity: 30%;
     }
 }
