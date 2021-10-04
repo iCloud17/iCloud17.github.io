@@ -47,94 +47,94 @@
     height: 100%;
 }
 
-#rainPath1 {
+.rainPath1 {
     top: -7px;
     left: 0;
 }
 
-#rainPath1 .rain {
+.rainPath1 .rain {
     animation-delay: 0ms;
 }
 
-#rainPath1 .rainSecond {
+.rainPath1 .rainSecond {
     animation-delay: 1500ms;
 }
 
-#rainPath2 {
+.rainPath2 {
     top: -15px;
     left: 3%;
 }
 
-#rainPath2 .rain {
+.rainPath2 .rain {
     animation-delay: 711ms;
 }
 
-#rainPath2 .rainSecond {
+.rainPath2 .rainSecond {
     animation-delay: 1945ms;
 }
 
-#rainPath3 {
+.rainPath3 {
     top: 0px;
     left: 6%;
 }
 
-#rainPath3 .rain {
+.rainPath3 .rain {
     animation-delay: 373ms;
 }
 
-#rainPath3 .rainSecond {
+.rainPath3 .rainSecond {
     animation-delay: 2113ms;
 }
 
-#rainPath4 {
+.rainPath4 {
     top: 10px;
     left: 9%;
 }
 
-#rainPath4 .rain {
+.rainPath4 .rain {
     animation-delay: 1413ms;
 }
 
-#rainPath4 .rainSecond {
+.rainPath4 .rainSecond {
     animation-delay: 3311ms;
 }
 
-#rainPath5 {
+.rainPath5 {
     top: -32px;
     left: 13%;
 }
 
-#rainPath5 .rain {
+.rainPath5 .rain {
     animation-delay: 101ms;
 }
 
-#rainPath5 .rainSecond {
+.rainPath5 .rainSecond {
     animation-delay: 1352ms;
 }
 
-#rainPath6 {
+.rainPath6 {
     top: -15px;
     left: 16.5%;
 }
 
-#rainPath6 .rain {
+.rainPath6 .rain {
     animation-delay: 2531ms;
 }
 
-#rainPath6 .rainSecond {
+.rainPath6 .rainSecond {
     animation-delay: 4407ms;
 }
 
-#rainPath7 {
+.rainPath7 {
     top: 0px;
     left: 20%;
 }
 
-#rainPath7 .rain {
+.rainPath7 .rain {
     animation-delay: 2000ms;
 }
 
-#rainPath7 .rainSecond {
+.rainPath7 .rainSecond {
     animation-delay: 3800ms;
 }
 
