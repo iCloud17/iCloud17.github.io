@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Experiment 2</title>
+    <style>
+        body, html {
+            min-height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        body {
+            height: 100vh;
+        }
+        section {
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+            cursor: default;
+            margin-top: 40vh;
+        }
+        h1 {
+            font-size: 40px;
+        }
+        h3 {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1 id="result">And the winner is...</h1>
+        <h3 id='choices'></h3>
+    </section>
+
+    <script>
+        // This script plays rock, paper, scissors with the user! It takes user input, and given different
+        // scenarios will display different elements with different colors
+        var display = document.getElementById('result');
+        var choices = document.getElementById('choices');
+        var actions = ['rock', 'paper', 'scissors'];
+
+        function chooseAction(min, max) {
+            return Math.floor((max - min + 1) * Math.random()) + min;
+        }
+
+        var userAction = prompt("Let's go Me vs You! Rock...Paper...Scissors!", "rock, paper, scissor").toLowerCase();
+
+        function getResult(pc, user) {
+            var result = '';
+            var color = '';
+            switch(user) {
+                case 'rock': user = 0;
+                    break;
+                case 'paper': user = 1;
+                    break;
+                case 'scissor': user = 2;
+                    break;
+                default: user = -1;
+                    result = "Hey, that's not a valid move! <br/> Try again! ᕦ(ò_óˇ)ᕤ";
+                    color = 'grey';
+                    return [result, pc, user, color];
+            }
+            var userBeats = (user? user - 1 : 2) ;
+            var userLoses = ((user == 2)? 0 : user + 1);
+            if(pc == userBeats) {
+                result = 'I lost. (;ﾟ︵ﾟ;)';
+                color = 'rgb(109, 52, 214)';
+            } else if(pc == userLoses) {
+                result = 'Haha I win! ヾ(。⌒∇⌒)ノ';
+                color = '#6FD08C';
+            } else {
+                result = 'Great minds think alike! (* ´ ∀`)人(´∀`*)';
+                color = 'orange';
+            }
+            return [result, pc, user, color];
+        }
+
+        var vals = getResult(chooseAction(0, actions.length - 1), userAction);
+        display.innerHTML = vals[0];
+        // console.log(vals[1], vals[2]);
+        if(vals[2] == -1) {
+            choices.style.display = 'none';
+            choices.innerHTML = '';
+        } else {
+            choices.style.display = 'inline';
+            choices.innerHTML = `Your ${actions[vals[2]]} vs My ${actions[vals[1]]}`;
+        }
+        document.body.style.backgroundColor = vals[3];
+    </script>
+</body>
+</html>
