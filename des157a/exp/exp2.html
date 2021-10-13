@@ -45,7 +45,7 @@
             return Math.floor((max - min + 1) * Math.random()) + min;
         }
 
-        var userAction = prompt("Let's go Me vs You! Rock...Paper...Scissors!", "rock, paper, scissor").toLowerCase();
+        var userAction = prompt("Let's go Me vs You! Choose, Rock...Paper...Scissors Go!", "").toLowerCase();
 
         function getResult(pc, user) {
             var result = '';
@@ -55,7 +55,7 @@
                     break;
                 case 'paper': user = 1;
                     break;
-                case 'scissor': user = 2;
+                case 'scissors': case 'scissor': user = 2;
                     break;
                 default: user = -1;
                     result = "Hey, that's not a valid move! <br/> Try again! ᕦ(ò_óˇ)ᕤ";
