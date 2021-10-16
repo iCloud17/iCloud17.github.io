@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="indexStyles.css" />
+    <title>Learning Journal</title>
+</head>
+<body>
+    <header>
+        <h1>Baadal's Learning Journal</h1>
+        <h2>DES 157A: Interactive Media</h2>
+    </header>
+
+    <main>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="dateCol">
+                        <div>
+                            <i>Date</i>
+                        </div>
+                    </td>
+                    <td class="articleCol">
+                        <article>
+                            <h3><div></div><span>Article Title</span></h3>
+                            <section>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, ratione quod saepe vitae sint at aliquid asperiores quo unde animi cupiditate vero magni ab illo, quia dolores aperiam illum voluptatem!
+                                    <br>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis optio cumque error, ipsum repudiandae eos fugit atque ea accusamus culpa autem minima maiores. Nam quibusdam beatae tempore sint dicta libero.
+                                    <br>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos recusandae quae rem fuga iure quisquam blanditiis architecto, cupiditate, molestias asperiores tempora tempore, sunt placeat commodi odio eligendi delectus exercitationem id!
+                                </p>
+                            </section>
+                        </article>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="dateCol">
+                        <div>
+                            <i>Date</i>
+                        </div>
+                    </td>
+                    <td class="articleCol">
+                        <article>
+                            <h3><div></div><span>Article Title</span></h3>
+                            <section>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, ratione quod saepe vitae sint at aliquid asperiores quo unde animi cupiditate vero magni ab illo, quia dolores aperiam illum voluptatem!
+                                    <br>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis optio cumque error, ipsum repudiandae eos fugit atque ea accusamus culpa autem minima maiores. Nam quibusdam beatae tempore sint dicta libero.
+                                    <br>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos recusandae quae rem fuga iure quisquam blanditiis architecto, cupiditate, molestias asperiores tempora tempore, sunt placeat commodi odio eligendi delectus exercitationem id!
+                                </p>
+                            </section>
+                        </article>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <a target="_blank" rel="noopener noreferrer" href="https://validator.w3.org/check?uri=https://iCloud17.github.io/des157a/lj">Validate HTML 5</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ficloud17.github.io%2Fdes157a%2Flj%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">Validate CSS</a>
+    </footer>
+
+    <script>
+
+        var articles = document.querySelectorAll('.articleCol article');
+        for(var i = 0; i < articles.length; i++) {
+            var title = articles[i].querySelector('h3');
+            title.addEventListener('click', function(event) {
+                var article = event.target.parentNode;
+                if(article.tagName == 'H3') {
+                    article = article.parentNode;
+                }
+                var arrow = article.querySelector('h3 div');
+                var contentSection = article.querySelector('section');
+                var para = contentSection.querySelector('p');
+                console.log(event.target, article.tagName, contentSection.style.height, arrow);
+                if(contentSection.style.height == '0px' || contentSection.style.height == '') {
+                    arrow.style.transform = "rotate(90deg)";
+                    contentSection.style.height = `${para.offsetHeight}px`;
+                } else {
+                    contentSection.style.height = '0';
+                    arrow.style.transform = "rotate(0)";
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>
