@@ -35,7 +35,7 @@ header h2 {
 /* ------------------------SETTING UP MAIN TABLE------------------------ */
 main {
     width: 100%;
-    height: 85%;
+    min-height: 85%;
     margin: 0 auto;
     align-content: center;
 }
@@ -109,18 +109,18 @@ table td {
     border-color: transparent transparent transparent #fff;
     transform: rotate(0);
     transform-origin: .25em 50%;
-    transition: 1s ease;
+    transition: .75s ease;
+}
+
+.articleCol .contentCover {
+    height: 0;
+    transition: .75s ease;
 }
 
 .articleCol p {
     background-color: #3f3c3c;
     word-spacing: 0.1em;
     line-height: 1.5em;
-}
-
-.articleCol .contentCover {
-    height: 0;
-    transition: 1s ease;
 }
 
 
