@@ -136,7 +136,8 @@ table td {
 
 /* ----------------------------SETTING UP FOOTER---------------------------- */
 footer {
-    max-width: 1300px;
+    max-width: 95%;
+    padding-right: 30px;
 }
 
 footer a {
