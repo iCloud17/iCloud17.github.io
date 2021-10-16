@@ -63,6 +63,12 @@ table td {
     width: 80%;
 }
 
+.articleCol .title {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
 .articleCol article, .dateCol div{
     margin: 10px 0;
 }
@@ -83,25 +89,26 @@ table td {
 
 .articleCol h3 {
     background-color: #4f4f4f;
-    cursor: pointer;
     list-style: none;
     display: block;
     position: relative;
 }
 
-.articleCol h3 span {
-    padding-left: 0.5em;
+.articleCol h3 {
+    padding-left: 3%;
 }
 
-.articleCol h3 div {
+.articleCol .arrow {
     content: '';
     position: absolute;
-    top: calc(50% - 0.25em);
-    border-width: .25em;
+    z-index: 1;
+    top: calc(50% - .5em);
+    left: 1.5%;
+    border-width: .5em;
     border-style: solid;
     border-color: transparent transparent transparent #fff;
     transform: rotate(0);
-    transform-origin: .125em 50%;
+    transform-origin: .25em 50%;
     transition: 1s ease;
 }
 
@@ -111,7 +118,7 @@ table td {
     line-height: 1.5em;
 }
 
-.articleCol section {
+.articleCol .contentCover {
     height: 0;
     transition: 1s ease;
 }

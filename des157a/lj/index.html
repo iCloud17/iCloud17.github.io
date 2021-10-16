@@ -25,8 +25,8 @@
                     </td>
                     <td class="articleCol">
                         <article>
-                            <h3><div></div><span>Article Title</span></h3>
-                            <section>
+                            <div class="title"><div class="arrow"></div><h3>Article Title</h3></div>
+                            <div class="contentCover">
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, ratione quod saepe vitae sint at aliquid asperiores quo unde animi cupiditate vero magni ab illo, quia dolores aperiam illum voluptatem!
                                     <br>
@@ -34,7 +34,7 @@
                                     <br>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos recusandae quae rem fuga iure quisquam blanditiis architecto, cupiditate, molestias asperiores tempora tempore, sunt placeat commodi odio eligendi delectus exercitationem id!
                                 </p>
-                            </section>
+                            </div>
                         </article>
                     </td>
                 </tr>
@@ -47,8 +47,8 @@
                     </td>
                     <td class="articleCol">
                         <article>
-                            <h3><div></div><span>Article Title</span></h3>
-                            <section>
+                            <div class="title"><div class="arrow"></div><h3>Article Title</h3></div>
+                            <div class="contentCover">
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, ratione quod saepe vitae sint at aliquid asperiores quo unde animi cupiditate vero magni ab illo, quia dolores aperiam illum voluptatem!
                                     <br>
@@ -56,7 +56,7 @@
                                     <br>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos recusandae quae rem fuga iure quisquam blanditiis architecto, cupiditate, molestias asperiores tempora tempore, sunt placeat commodi odio eligendi delectus exercitationem id!
                                 </p>
-                            </section>
+                            </div>
                         </article>
                     </td>
                 </tr>
@@ -73,21 +73,21 @@
 
         var articles = document.querySelectorAll('.articleCol article');
         for(var i = 0; i < articles.length; i++) {
-            var title = articles[i].querySelector('h3');
+            var title = articles[i].querySelector('.title');
             title.addEventListener('click', function(event) {
-                var article = event.target.parentNode;
-                if(article.tagName == 'H3') {
+                var article = event.target;
+                while(article.tagName != 'ARTICLE') {
                     article = article.parentNode;
                 }
-                var arrow = article.querySelector('h3 div');
-                var contentSection = article.querySelector('section');
-                var para = contentSection.querySelector('p');
-                console.log(event.target, article.tagName, contentSection.style.height, arrow);
-                if(contentSection.style.height == '0px' || contentSection.style.height == '') {
+                var arrow = article.querySelector('.arrow')
+                var contentDivs = article.querySelector('.contentCover');
+                var para = contentDivs.querySelector('p');
+                // console.log(event.target, article.tagName, contentDivs.style.height, arrow);
+                if(contentDivs.style.height == '0px' || contentDivs.style.height == '') {
                     arrow.style.transform = "rotate(90deg)";
-                    contentSection.style.height = `${para.offsetHeight}px`;
+                    contentDivs.style.height = `${para.offsetHeight}px`;
                 } else {
-                    contentSection.style.height = '0';
+                    contentDivs.style.height = '0';
                     arrow.style.transform = "rotate(0)";
                 }
             });
