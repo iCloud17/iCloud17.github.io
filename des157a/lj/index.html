@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="indexStyles.css" />
+    <link rel="stylesheet" type="text/css" href="background.css" />
     <title>Learning Journal</title>
 </head>
 <body>
@@ -14,6 +15,9 @@
         <h2>DES 157A: Interactive Media</h2>
     </header>
 
+    <div id="stars"></div>
+    <div id="stars1"></div>
+    <div id="stars2"></div>
     <main>
         <table>
             <tbody>
@@ -86,13 +90,37 @@
         </table>
     </main>
 
+    <div class="spacer"></div>
+
     <footer>
-        <a target="_blank" rel="noopener noreferrer" href="https://validator.w3.org/check?uri=https://iCloud17.github.io/des157a/lj">Validate HTML 5</a>
         <a target="_blank" rel="noopener noreferrer" href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ficloud17.github.io%2Fdes157a%2Flj%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">Validate CSS</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://validator.w3.org/check?uri=https://iCloud17.github.io/des157a/lj">Validate HTML 5</a>
     </footer>
 
     <script>
-
+        // Add lots of stars for each level
+        // function getRandomInt(lo, hi) {
+        //     return Math.floor(((hi - lo + 1) * Math.random()) + lo)
+        // }
+        
+        // function addStars(n, element) {
+        //     var boxShadows = '';
+        //     for(var i = 1; i < n; i++) {
+        //         // console.log(i);
+        //         boxShadows += `${getRandomInt(0, 2000)}px ${getRandomInt(0, 2000)}px #FFF, `;
+        //     }
+        //     boxShadows += `${getRandomInt(0, 2000)}px ${getRandomInt(0, 2000)}px #FFF`;
+        //     element.style.boxShadows = boxShadows;
+        //     console.log(element.style.boxShadows);
+        // }
+        // var stars = document.querySelector('#stars');
+        // addStars(700, stars);
+        // var stars1 = document.querySelector('#stars1');
+        // addStars(350, stars1);
+        // var stars2 = document.querySelector('#stars2');
+        // addStars(175, stars2);
+        
+        // Add event listeners for each article to open onclick
         var articles = document.querySelectorAll('.articleCol article');
         for(var i = 0; i < articles.length; i++) {
             var title = articles[i].querySelector('.title');

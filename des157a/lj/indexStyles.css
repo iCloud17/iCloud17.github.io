@@ -1,18 +1,30 @@
 /* ---------------------------SETTING UP PAGE--------------------------- */
-body, html {
-    min-width: 800px;
+html {
+    /* min-height: 800px; */
     max-width: 1366px;
     width: 1366px;
-    height: 90vh;
+    height: 95.725%;
+    min-height: 95.725%;
     margin: 0;
+    /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
+    background-color: #11171f;
 }
 
 body {
     color: white;
-    background-color: #2d2d2d;
+    max-width: 1366px;
+    width: 1366px;
+    min-height: 95.725%;
+    /* background-color: #2d2d2d; */
     width: 100%;
     margin: auto;
-    padding: 15px 0;
+    padding: 2% 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.spacer {
+    flex: 1;
 }
 
 /* --------------------------SETTING UP HEADER-------------------------- */
@@ -21,7 +33,6 @@ header{
     max-width: 1100px;
     text-align: center;
     margin-bottom: 10px;
-    
 }
 
 header h1 {
@@ -35,8 +46,9 @@ header h2 {
 /* ------------------------SETTING UP MAIN TABLE------------------------ */
 main {
     width: 100%;
-    min-height: 85%;
+    min-height: 75%;
     margin: 0 auto;
+    margin-bottom: 20px;
     align-content: center;
 }
 
@@ -45,6 +57,7 @@ table {
     /* height: 100%; */
     margin: auto;
     border-collapse: collapse;
+    border-spacing: 2em;
 }
 
 table td {
@@ -55,7 +68,7 @@ table td {
 .dateCol {
     text-align: right;
     width: 20%;
-    border-right: 2px solid #d1e2e6;
+    border-right: 2px solid #a5c3e5;
 }
 
 .articleCol {
@@ -88,7 +101,7 @@ table td {
 }
 
 .articleCol h3 {
-    background-color: #4f4f4f;
+    background-color: #2a3f55;
     list-style: none;
     display: block;
     position: relative;
@@ -118,34 +131,28 @@ table td {
 }
 
 .articleCol p {
-    background-color: #3f3c3c;
+    background-color: #4e6075;
     word-spacing: 0.1em;
     line-height: 1.5em;
+    color: white;
+    font-size: 1.15em;
+    text-align: justify;
 }
 
 
 /* ----------------------------SETTING UP FOOTER---------------------------- */
-footer {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-}
-
 footer a {
-    display: inline-block;
-    flex: 1;
     text-align: center;
-    margin: 0 50px;
     color: white;
     display: block;
     font-size: 17px;
-    padding: 5px;
-    border: 4px solid transparent;
+    padding: 1%;
+    border: 3px solid transparent;
     text-decoration: none;
+    float: right;
 }
 
 footer a:hover {
-    border: 4px solid #A9DDD6;
+    border: 3px solid #185494;
     text-decoration: underline;
 }
