@@ -44,6 +44,8 @@ main {
     margin: 0 auto;
     margin-bottom: 20px;
     align-content: center;
+    z-index: 1;
+    opacity: 0.93;
 }
 
 table {
@@ -90,7 +92,7 @@ table td {
 }
 
 .articleCol h3, .articleCol p, .dateCol {
-    padding: 10px;
+    padding: 15px;
     margin: 0;
 }
 
@@ -109,13 +111,13 @@ table td {
     content: '';
     position: absolute;
     z-index: 1;
-    top: calc(50% - .5em);
+    top: calc(50% - .3em);
     left: 1.5%;
-    border-width: .5em;
+    border-width: .3em;
     border-style: solid;
     border-color: transparent transparent transparent #fff;
     transform: rotate(0);
-    transform-origin: .25em 50%;
+    transform-origin: .15em 50%;
     transition: .75s ease;
 }
 
@@ -131,6 +133,11 @@ table td {
     color: white;
     font-size: 1.15em;
     text-align: justify;
+}
+
+.articleCol p a {
+    color: #569be6;
+    font-style: italic;
 }
 
 
