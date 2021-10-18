@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="indexStyles.css" />
     <link rel="stylesheet" type="text/css" href="background.css" />
     <title>Learning Journal</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -76,53 +77,5 @@
         <a target="_blank" rel="noopener noreferrer" href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ficloud17.github.io%2Fdes157a%2Flj%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">Validate CSS</a>
         <a target="_blank" rel="noopener noreferrer" href="https://validator.w3.org/check?uri=https://iCloud17.github.io/des157a/lj">Validate HTML 5</a>
     </footer>
-
-    <script>
-        // Add lots of stars for each level
-        // function getRandomInt(lo, hi) {
-        //     return Math.floor(((hi - lo + 1) * Math.random()) + lo)
-        // }
-        
-        // function addStars(n, element) {
-        //     var boxShadows = '';
-        //     for(var i = 1; i < n; i++) {
-        //         // console.log(i);
-        //         boxShadows += `${getRandomInt(0, 2000)}px ${getRandomInt(0, 2000)}px #FFF, `;
-        //     }
-        //     boxShadows += `${getRandomInt(0, 2000)}px ${getRandomInt(0, 2000)}px #FFF`;
-        //     element.style.boxShadows = boxShadows;
-        //     console.log(element.style.boxShadows);
-        // }
-        // var stars = document.querySelector('#stars');
-        // addStars(700, stars);
-        // var stars1 = document.querySelector('#stars1');
-        // addStars(350, stars1);
-        // var stars2 = document.querySelector('#stars2');
-        // addStars(175, stars2);
-        
-        // Add event listeners for each article to open onclick
-        var articles = document.querySelectorAll('.articleCol article');
-        for(var i = 0; i < articles.length; i++) {
-            var title = articles[i].querySelector('.title');
-            title.addEventListener('click', function(event) {
-                var article = event.target;
-                while(article.tagName != 'ARTICLE') {
-                    article = article.parentNode;
-                }
-                var arrow = article.querySelector('.arrow')
-                var contentDivs = article.querySelector('.contentCover');
-                var para = contentDivs.querySelector('p');
-                // console.log(event.target, article.tagName, contentDivs.style.height, arrow);
-                if(contentDivs.style.height == '0px' || contentDivs.style.height == '') {
-                    arrow.style.transform = "rotate(90deg)";
-                    contentDivs.style.height = `${para.offsetHeight}px`;
-                } else {
-                    contentDivs.style.height = '0';
-                    arrow.style.transform = "rotate(0)";
-                }
-            });
-        }
-
-    </script>
 </body>
 </html>
