@@ -1,4 +1,5 @@
 /* ---------------------------SETTING UP PAGE--------------------------- */
+
 html {
     /* min-height: 800px; */
     max-width: 1366px;
@@ -23,8 +24,10 @@ body {
     flex: 1;
 }
 
+
 /* --------------------------SETTING UP HEADER-------------------------- */
-header{
+
+header {
     text-align: center;
     margin-bottom: 10px;
 }
@@ -37,7 +40,9 @@ header h2 {
     margin: 5px 0;
 }
 
+
 /* ------------------------SETTING UP MAIN TABLE------------------------ */
+
 main {
     width: 100%;
     min-height: 75%;
@@ -78,7 +83,8 @@ table td {
     cursor: pointer;
 }
 
-.articleCol article, .dateCol div{
+.articleCol article,
+.dateCol div {
     margin: 10px 0;
 }
 
@@ -88,11 +94,14 @@ table td {
     overflow: hidden;
 }
 
-.articleCol h3, .dateCol {
+.articleCol h3,
+.dateCol {
     font-size: 25px;
 }
 
-.articleCol h3, .articleCol p, .dateCol {
+.articleCol h3,
+.articleCol p,
+.dateCol {
     padding: 15px;
     margin: 0;
 }
@@ -130,7 +139,7 @@ table td {
 .articleCol p {
     background-color: #4e6075;
     word-spacing: 0.1em;
-    line-height: 1.5em;
+    line-height: 1.3em;
     color: white;
     font-size: 1.15em;
     text-align: justify;
@@ -143,6 +152,7 @@ table td {
 
 
 /* ----------------------------SETTING UP FOOTER---------------------------- */
+
 footer {
     max-width: 95%;
     padding-right: 30px;
