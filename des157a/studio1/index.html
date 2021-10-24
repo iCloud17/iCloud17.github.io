@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'> -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Building Mad Lib Script</title>
+    <script src="script.js" defer></script>
+</head>
+
+<body class="gridParent">
+
+    <img src="images/spiderWeb.png" alt="Web" id="spiderWeb">
+    <img src="images/blueStar.png" alt="star" id="blueStar1">
+    <img src="images/blueStar.png" alt="star" id="blueStar2">
+    <img src="images/greenStar.png" alt="star" id="greenStar1">
+    <img src="images/greenStar.png" alt="star" id="greenStar2">
+    <img src="images/ghost.png" alt="ghost" id="ghost">
+
+    <header class="gridChild">
+        <h1>Ghost <br> Stories</h1>
+    </header>
+
+    <main class="gridChild">
+        <div id="formPage">
+            <h2>Proceed further if you dare...</h2>
+            <form id="myForm">
+                <label for="noun1"> Noun</label>
+                <input type="text" name="noun1" id="noun1" required>
+                <br>
+                <label for="noun2"> Noun</label>
+                <input type="text" name="noun2" id="noun2" required>
+                <br>
+                <label for="adj1"> Adjective</label>
+                <input type="text" name="adj1" id="adj1">
+                <br>
+                <label for="verb1"> Verb</label>
+                <input type="text" name="verb1" id="verb1">
+                <br>
+                <input type="submit" value="Go Ahead..." id="submitBtn">
+            </form>
+        </div>
+        <div id="rotatedFrame"></div>
+        <article id="madlib"></article>
+    </main>
+
+</body>
+
+</html>

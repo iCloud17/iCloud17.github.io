@@ -4,7 +4,7 @@
 
     // Add lots of stars for each level
     // function getRandomInt(lo, hi) {
-    //     return Math.floor(((hi - lo + 1) * Math.random()) + lo)
+    //     return Math.floor(((hi - lo + 1) * Math.random()) + lo);
     // }
     
     // function addStars(n, element) {
