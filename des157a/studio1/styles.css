@@ -17,10 +17,11 @@ body {
     height: 100%;
     max-height: 768px;
     position: relative;
-    flex: 0 1 auto;
     align-self: auto;
-    border: hotpink 2px solid;
+    border: black 4px solid;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 html, body {
@@ -28,8 +29,8 @@ html, body {
     margin: 0;
 }
 
-html, body, main, main #rotatedFrame, main #mainPage, input {
-    background-color: #333333;
+html, body, main, main #rotatedFrame, main #mainPage, input, #story button {
+    background-color: #303030;
 }
 
 /* ------------------------------IMAGES CSS------------------------------ */
@@ -39,44 +40,45 @@ img {
 }
 
 #spiderWeb {
+    width: 55%;
     top: 0;
     left: 0;
-    transform: translate(-40%, -30%);
-    width: 85%;
+    transform: translate(-40%, -30%) rotate(-9deg);
 }
 
 #blueStar1 {
+    width: 5%;
     top: 25%;
     left: 30.5%;
-    width: 5%;
     transform: rotate(50deg);
 }
 
 #blueStar2 {
+    width: 5%;
     top: 35%;
     left: 92%;
-    width: 5%;
     transform: rotate(20deg);
 }
 
 #greenStar1 {
+    width: 5%;
     top: 2%;
     left: 65%;
-    width: 5%;
     transform: rotate(70deg);
 }
 
 #greenStar2 {
+    width: 5%;
     top: 61%;
     left: 40%;
-    width: 5%;
     transform: rotate(37deg);
 }
 
 #ghost {
     width: 15%;
-    top: 10%;
-    left: 50%;
+    top: 2%;
+    left: 41%;
+    transform: rotate(0deg);
     opacity: 1;
     transition: 0.75s ease opacity;
 }
@@ -87,6 +89,7 @@ img {
     display: inline-grid;
     grid-template-columns: 1.5fr 2.5fr;
     grid-gap: 10px;
+    flex: 0 1 auto;
 }
 
 .gridChild {
@@ -95,10 +98,14 @@ img {
     position: relative;
 }
 
+#mainPart {
+    flex: 20;
+}
+
 header {
     font-family: 'Aclonica';
     justify-content: right;
-    font-size: 1.75em;
+    font-size: 2em;
     color: #F47FB5;
 }
 
@@ -106,81 +113,140 @@ main {
     justify-content: center;
     flex-direction: column;
     position: relative;
-    width: auto;
-    height: auto;
-    /* padding: 1%; */
 }
 
 main .frames {
+    padding: 1%;
+    margin-top: 7%;
     box-sizing: border-box;
     border: 4px #E2CDC2 solid;
     border-radius: 2px;
-    padding: 1%;
-    margin-top: 7%;
 }
 
 main #rotatedFrame {
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 0 10px #000000, inset 0 0 20px #bebcbc;
     transform: rotate(-5deg);
     transform-origin: 0% 100%;
-    box-shadow: 0 0 10px #000000, inset 0 0 20px #bebcbc;
-    z-index: 1;
-    position: absolute;
 }
 
 main #mainPage {
+    position: relative;
+    z-index: 2;
     border: 4px #E2CDC2 solid;
     border-radius: 2px;
-    z-index: 2;
-    opacity: 100%;
-    position: relative;
-    height: 65%;
-    width: 60%;
 }
 
 main #mainPage h2 {
-    font-family: 'Aclonica';
     display: inline-block;
     color: #E35554;
+    font-family: 'Aclonica';
     font-size: 1.8em;
 }
 
 main #mainPage form {
     padding: 1%;
-    border-radius: 3px;
-    font-family: 'Griffy';
     color: #74C6AC;
+    border-radius: 3px;
+}
+
+footer {
+    width: 100%;
+    margin: auto;
+    flex: 1;
+}
+
+footer a {
+    display: inline-block;
+    margin: 0 20px;
+    padding: 5px;
+    border: 4px solid transparent;
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Griffy";
+    letter-spacing: 0.07em;
+}
+
+footer a:hover {
+    border: 4px solid #74C6AC;
 }
 
 
 /* ----------------------------ADDING FORM CSS---------------------------- */
 
 label {
-    font-size: 1.5em;
+    margin-top: 1em;
+    font-size: 1em;
+    font-family: 'Aclonica';
 }
 
 input {
-    margin: 0.5em 0.5em;
+    width: 15em;
+    margin: 0.3em 0;
     border: 2px solid #E2CDC2;
     border-radius: 2px;
     color: #E2CDC2;
-    font-size: 1.25em;
+    font-family: "Griffy";
+    font-size: 1em;
     letter-spacing: 0.1em;
 }
 
-form #submitBtn {
+input:focus {
+    background-color: rgba(227, 85, 84, 0.2);
+    box-shadow: 0 0.3em 1.5em -0.5em rgb(255, 0, 0);
+}
+
+form #submitBtn, #story button {
+    position: relative;
+    float: right;
+    width: auto;
+    padding: 2%;
+    color: #E35554;
     font-family: 'Aclonica';
     font-size: 1.1em;
-    color: #E35554;
-    float: right;
-    padding: 2%;
-    position: relative;
     box-shadow: 0 0.25em 1em -0.4em rgb(255, 0, 0);
     cursor: pointer;
     transition: 0.25s ease;
 }
 
-form #submitBtn:hover {
+form #submitBtn:hover, #story button:hover {
     box-shadow: 0 0.5em 2em -0.3em rgb(255, 0, 0);
 }
 
 /* -------------------------------STORY CSS------------------------------- */
+
+#story {
+    position: absolute;
+    max-height: inherit;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    padding: 3%;
+}
+
+#story p {
+    position: relative;
+    margin-bottom: 0.5em;
+    color: #E2CDC2;
+    font-family: 'Aclonica';
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+#story span {
+    position: relative;
+    color: #E35554;
+    font-family: 'Griffy';
+    font-size: 1.3em;
+}
+
+#story button {
+    position: relative;
+    font-size: 1.5em;
+}

@@ -9,11 +9,11 @@
     <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Griffy' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <title>Building Mad Lib Script</title>
+    <title>Mad Libs</title>
     <script src="script.js" defer></script>
 </head>
 
-<body class="gridParent">
+<body>
 
     <img src="images/spiderWeb.png" alt="Web" id="spiderWeb">
     <img src="images/blueStar.png" alt="star" id="blueStar1">
@@ -22,32 +22,54 @@
     <img src="images/greenStar.png" alt="star" id="greenStar2">
     <img src="images/ghost.png" alt="ghost" id="ghost">
 
-    <header class="gridChild">
-        <h1>Ghost <br> Stories</h1>
-    </header>
+    <div id="mainPart" class="gridParent">
+        <header class="gridChild">
+            <h1>Ghost <br> Stories</h1>
+        </header>
+    
+        <main class="gridChild">
+            <div class="frames" id="mainPage">
+                <section id="formPage">
+                    <h2>Proceed further if you dare...</h2>
+                    <form id="myForm">
+                        <label for="relation1"> Family Relation 1</label> <br>
+                        <input type="text" name="relation1" id="relation1" placeholder="Father, Sister" required> <br>
 
-    <main class="gridChild">
-        <div class="frames" id="mainPage">
-            <h2>Proceed further if you dare...</h2>
-            <form id="myForm">
-                <label for="noun1"> Noun</label>
-                <input type="text" name="noun1" id="noun1" required>
-                <br>
-                <label for="noun2"> Noun</label>
-                <input type="text" name="noun2" id="noun2" required>
-                <br>
-                <label for="adj1"> Adjective</label>
-                <input type="text" name="adj1" id="adj1">
-                <br>
-                <label for="verb1"> Verb</label>
-                <input type="text" name="verb1" id="verb1">
-                <br>
-                <input type="submit" value="Go Ahead..." id="submitBtn">
-            </form>
-        </div>
-        <div class="frames" id="rotatedFrame"></div>
-    </main>
+                        <label for="relation2"> Family Relation 2</label> <br>
+                        <input type="text" name="relation2" id="relation2" placeholder="Not same as above" required> <br>
+                        
+                        <label for="room1"> Room in House </label> <br>
+                        <input type="text" name="room1" id="room1" placeholder="Kitchen, Closet" required> <br>
 
+                        <label for="adj1"> Adjective</label> <br>
+                        <input type="text" name="adj1" id="adj1" placeholder="erratic, shaky, rapid" required> <br>
+                        
+                        <label for="feel1"> Feeling</label> <br>
+                        <input type="text" name="feel1" id="feel1" placeholder="scared, terrified, brave" required> <br>
+
+                        <label for="verb"> Verb</label> <br>
+                        <input type="text" name="verb" id="verb" placeholder="run, jump" required> <br>
+                        
+                        <input type="submit" value="Go Ahead..." id="submitBtn">
+                    </form>
+                </section>
+                <section id="story">
+                    <p>
+                        You and your <span id="fr1"></span> <span id="vb1"></span> and hide in the <span id="loc"></span>. The entire house is silent. "It" already froze your <span id="fr2"></span>. You take a quick peek and see "It" loitering outside. Your hand is on your <span id="fr11"></span>'s face, trying to stifle their <span id="ad1"></span> breathing. As you notice your <span id="fr12"></span>'s condensed breath escaping between your fingers, a chill runs up your spine, and it's not only because you're <span id="feeling"></span>.
+                    </p>
+                    <button>
+                        Play Again?
+                    </button>
+                </section>
+            </div>
+            <div class="frames" id="rotatedFrame"></div>
+        </main>
+    </div>
+
+    <footer>
+        <a target="_blank" rel="noopener noreferrer" href="https://validator.w3.org/check?uri=https://iCloud17.github.io/des157a/studio1">Validate HTML 5</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ficloud17.github.io%2Fdes157a%2Fstudio1%2f&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">Validate CSS</a>
+    </footer>
 </body>
 
 </html>
