@@ -15,7 +15,9 @@
         resizeFrame(frame, mainPage);
     });
 
-    resizeFrame(frame, mainPage);
+    window.addEventListener('load', function(event) {
+        resizeFrame(frame, mainPage);
+    });
 
     //-------------------------------Random Spawn Ghost-------------------------------
     const ghost = document.getElementById('ghost');
@@ -25,7 +27,6 @@
     function getRandomInt(lo, hi) {
         return Math.floor(((hi - lo + 1) * Math.random()) + lo);
     }
-
 
     function spawnGhost() {
         //disappear
