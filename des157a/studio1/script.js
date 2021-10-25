@@ -4,7 +4,7 @@
 
     //------------------Resize backpage to be same as main form page------------------
     let frame = document.getElementById('rotatedFrame');
-    let formPage = document.getElementById('formPage');
+    let formPage = document.getElementById('mainPage');
 
     function resizeFrame(toSet, toCopy) {
         toSet.style.height = toCopy.offsetHeight + 'px';
@@ -51,5 +51,5 @@
         }, duration);
     }
 
-    var timer =  setInterval(spawnGhost, 15000);
+    // var timer =  setInterval(spawnGhost, 15000);
 }());

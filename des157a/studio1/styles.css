@@ -23,11 +23,13 @@ body {
     position: relative;
 }
 
-html,
-body {
-    background-color: #333333;
+html, body {
     overflow: hidden;
     margin: 0;
+}
+
+html, body, main, main #rotatedFrame, main #mainPage, input {
+    background-color: #333333;
 }
 
 /* ------------------------------IMAGES CSS------------------------------ */
@@ -51,22 +53,22 @@ img {
 }
 
 #blueStar2 {
-    top: 61%;
-    left: 40%;
+    top: 35%;
+    left: 92%;
     width: 5%;
     transform: rotate(20deg);
 }
 
 #greenStar1 {
-    top: 1%;
+    top: 2%;
     left: 65%;
     width: 5%;
     transform: rotate(70deg);
 }
 
 #greenStar2 {
-    top: 35%;
-    left: 92%;
+    top: 61%;
+    left: 40%;
     width: 5%;
     transform: rotate(37deg);
 }
@@ -94,7 +96,6 @@ img {
 }
 
 header {
-    /* background-color: indigo; */
     font-family: 'Aclonica';
     justify-content: right;
     font-size: 1.75em;
@@ -102,35 +103,33 @@ header {
 }
 
 main {
-    background-color: #333333;
     justify-content: center;
     flex-direction: column;
     position: relative;
     width: auto;
     height: auto;
+    /* padding: 1%; */
 }
 
-main #wrapper {
-    position: relative;
+main .frames {
+    box-sizing: border-box;
+    border: 4px #E2CDC2 solid;
+    border-radius: 2px;
+    padding: 1%;
+    margin-top: 7%;
 }
 
 main #rotatedFrame {
-    box-sizing: border-box;
-    border: 4px #E2CDC2 solid;
     transform: rotate(-5deg);
     transform-origin: 0% 100%;
     box-shadow: 0 0 10px #000000, inset 0 0 20px #bebcbc;
-    border-radius: 2px;
-    padding: 1%;
     z-index: 1;
-    opacity: 100%;
     position: absolute;
 }
 
-main #formPage {
+main #mainPage {
     border: 4px #E2CDC2 solid;
     border-radius: 2px;
-    padding: 1%;
     z-index: 2;
     opacity: 100%;
     position: relative;
@@ -138,36 +137,50 @@ main #formPage {
     width: 60%;
 }
 
-main #formPage h2 {
+main #mainPage h2 {
     font-family: 'Aclonica';
     display: inline-block;
     color: #E35554;
+    font-size: 1.8em;
 }
 
-main #formPage form {
+main #mainPage form {
     padding: 1%;
     border-radius: 3px;
-    font-family: 'MV Boli';
+    font-family: 'Griffy';
     color: #74C6AC;
 }
 
 
 /* ----------------------------ADDING FORM CSS---------------------------- */
 
+label {
+    font-size: 1.5em;
+}
+
 input {
-    margin: 10px 0;
-    background-color: #333333;
+    margin: 0.5em 0.5em;
     border: 2px solid #E2CDC2;
     border-radius: 2px;
     color: #E2CDC2;
+    font-size: 1.25em;
+    letter-spacing: 0.1em;
 }
 
 form #submitBtn {
     font-family: 'Aclonica';
+    font-size: 1.1em;
     color: #E35554;
     float: right;
     padding: 2%;
     position: relative;
-    box-shadow: 0 0.5em 2em -0.4em rgb(255, 0, 0);
+    box-shadow: 0 0.25em 1em -0.4em rgb(255, 0, 0);
     cursor: pointer;
+    transition: 0.25s ease;
 }
+
+form #submitBtn:hover {
+    box-shadow: 0 0.5em 2em -0.3em rgb(255, 0, 0);
+}
+
+/* -------------------------------STORY CSS------------------------------- */

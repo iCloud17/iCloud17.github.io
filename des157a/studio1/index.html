@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-    <!-- <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'> -->
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Griffy' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Building Mad Lib Script</title>
     <script src="script.js" defer></script>
@@ -26,7 +27,7 @@
     </header>
 
     <main class="gridChild">
-        <div id="formPage">
+        <div class="frames" id="mainPage">
             <h2>Proceed further if you dare...</h2>
             <form id="myForm">
                 <label for="noun1"> Noun</label>
@@ -44,8 +45,7 @@
                 <input type="submit" value="Go Ahead..." id="submitBtn">
             </form>
         </div>
-        <div id="rotatedFrame"></div>
-        <article id="madlib"></article>
+        <div class="frames" id="rotatedFrame"></div>
     </main>
 
 </body>
