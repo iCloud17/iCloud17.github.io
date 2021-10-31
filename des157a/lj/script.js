@@ -36,11 +36,16 @@
             }
             let arrow = article.querySelector('.arrow')
             let contentDivs = article.querySelector('.contentCover');
+            let fig = contentDivs.querySelector('figure');
             let para = contentDivs.querySelector('p');
             // console.log(event.target, article.tagName, contentDivs.style.height, arrow);
             if(contentDivs.style.height == '0px' || contentDivs.style.height == '') {
                 arrow.style.transform = "rotate(90deg)";
-                contentDivs.style.height = `${para.offsetHeight}px`;
+                let height = para.offsetHeight;
+                if(fig) {
+                    height += fig.offsetHeight;
+                }
+                contentDivs.style.height = `${height}px`;
             } else {
                 contentDivs.style.height = '0';
                 arrow.style.transform = "rotate(0)";

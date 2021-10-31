@@ -134,10 +134,10 @@ table td {
 .articleCol .contentCover {
     height: 0;
     transition: .75s ease;
+    background-color: #4e6075;
 }
 
 .articleCol p {
-    background-color: #4e6075;
     word-spacing: 0.1em;
     line-height: 1.3em;
     color: white;
@@ -150,6 +150,19 @@ table td {
     font-style: italic;
 }
 
+figure {
+    margin: 0;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 1%;
+}
 
 /* ----------------------------SETTING UP FOOTER---------------------------- */
 
