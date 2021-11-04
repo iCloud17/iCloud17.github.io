@@ -21,7 +21,6 @@ body {
     align-self: auto;
     border: black 2px solid;
     box-shadow: 0 0 30px #000000;
-    position: relative;
     display: flex;
     flex-direction: column;
 }
