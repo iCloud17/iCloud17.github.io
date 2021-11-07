@@ -10,16 +10,14 @@
 	window.addEventListener('load', function () {
 		const posts = document.querySelectorAll('section');
 		let allImgs = document.querySelectorAll('figure img');
-		let fig = document.querySelector('figure');
-		let footer = document.querySelector('footer');
 		let postTops = [];
 		let pageTop;
 		let counter = 1;
+		let navCounter = 1;
 		let prevCounter = 1;
 		let doneResizing;
 
-		footer.style.opacity = 1;
-
+		//---------------------------------Dissappear Preloader---------------------------------
 		const preloader = document.getElementById('preloader');
 		preloader.className = 'fadeout';
 
@@ -29,10 +27,9 @@
 			preloader.style.display = 'none';
 		});
 
-
 		resetPagePosition();
 
-		//When clicking on image, show all constellations only when in first page
+		//------------------------TOGGLE CONSTELLATIONS ON FIRST IMAGE------------------------
 		allImgs[1].addEventListener('click', function(event) {
 			if(counter == 1) {
 				let op = Number(event.target.style.opacity);
@@ -41,6 +38,22 @@
 			}
 		});
 
+		//-----------------------------HANDLE SMOOTH JUMP SCROLL-----------------------------
+		const navlinks = document.querySelectorAll('header a');
+		navlinks.forEach(function(link) {
+			link.addEventListener('click', smoothScroll);
+		});
+
+		function smoothScroll(event) {
+			event.preventDefault();
+			const targetID = event.target.getAttribute('href');
+			const targetAnchor = document.getElementById(targetID);
+			navlinks[navCounter - 1].removeAttribute('class');
+			const ogTop = Math.floor(targetAnchor.getBoundingClientRect().top);
+			window.scrollBy({top: ogTop, left: 0, behavior: 'smooth'});
+		}
+
+		//-----------------------------------HANDLE SCROLL-----------------------------------
 		window.addEventListener('scroll', function () {
 			pageTop = window.pageYOffset + 300;
 
@@ -60,6 +73,9 @@
 				} else {
 					allImgs[1].style.opacity = '1';
 				}
+				navlinks[prevCounter - 1].removeAttribute('class');
+				navlinks[counter - 1].className = 'circleFull';
+				navCounter = counter;
 				prevCounter = counter;
 			}
 
