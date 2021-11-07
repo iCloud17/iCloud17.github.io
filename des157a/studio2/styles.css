@@ -4,13 +4,23 @@
 
 body {
 	font-family: Arial;
-	background-color: #1f1f1f;
 	color: #03c900;
 }
 
-main {
+/* -----------------------COMMON STUFF----------------------- */
+
+body, footer {
+	background-color: #1f1f1f;
+}
+
+main, footer {
 	width: 30vw;
-	padding: 20px;
+}
+
+/* -------------------------TEXT PART------------------------- */
+
+main {
+	padding: 15px;
 }
 
 section {
@@ -41,6 +51,8 @@ a:hover {
 	font-size: 0.9em;
 }
 
+/* ----------------------------IMAGE PART---------------------------- */
+
 figure {
 	display: block;
 	margin: 0;
@@ -48,7 +60,7 @@ figure {
 	height: 100vh;
 	position: fixed;
 	top:0;
-	right:0;
+	left: 30vw;
 	overflow: hidden;
 }
 
@@ -63,6 +75,8 @@ figure img {
 #labelledImg {
 	opacity: 0;
 }
+
+/* ------------------------------PARTS OF IMAGE------------------------------ */
 
 .sect1 {
 	width: 133vh; /* 147% the height of the image is the width ratio */
@@ -109,15 +123,18 @@ figure img {
 	width: 2300px;
 }
 
+/* ------------------------------FOOTER------------------------------ */
+footer {
+	position: sticky;
+	bottom: 0;
+	padding: 5px 0;
+	font-size: 0.75em;
+	opacity: 0;
+	display: flex;
+    align-items: center;
+}
 
-figure figcaption{
-	width: 50%;
-	position: absolute;
-	left: 50%;
-	top: 105%;
-	transform: translateX(-50%);
-	background: rgba(255, 255, 255, 0.8);
-	border-radius: 10px;
-	padding: 20px;
-	line-height: 1.5em;
+footer a{
+	flex: 1;
+	text-align: center;
 }

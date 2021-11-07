@@ -10,11 +10,15 @@
 	window.addEventListener('load', function () {
 		const posts = document.querySelectorAll('section');
 		let allImgs = document.querySelectorAll('figure img');
+		let fig = document.querySelector('figure');
+		let footer = document.querySelector('footer');
 		let postTops = [];
 		let pageTop;
 		let counter = 1;
 		let prevCounter = 1;
 		let doneResizing;
+
+		footer.style.opacity = 1;
 
 		const preloader = document.getElementById('preloader');
 		preloader.className = 'fadeout';
@@ -50,7 +54,6 @@
 
 			if (counter != prevCounter) {
 				allImgs.forEach((ele) => {ele.className = 'sect' + counter;})
-
 				//We don't want to see constellations in original image or when looking at the Milky Way Patch
 				if(counter == 1 || counter == 2) {
 					allImgs[1].style.opacity = '0';
