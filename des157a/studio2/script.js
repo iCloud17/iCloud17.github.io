@@ -48,7 +48,9 @@
 			event.preventDefault();
 			const targetID = event.target.getAttribute('href');
 			const targetAnchor = document.getElementById(targetID);
-			navlinks[navCounter - 1].removeAttribute('class');
+			if(navlinks[navCounter - 1].getAttribute('href') !== targetID) {
+				navlinks[navCounter - 1].removeAttribute('class');
+			}
 			const ogTop = Math.floor(targetAnchor.getBoundingClientRect().top);
 			window.scrollBy({top: ogTop, left: 0, behavior: 'smooth'});
 		}
