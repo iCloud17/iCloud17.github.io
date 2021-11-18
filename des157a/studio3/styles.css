@@ -189,3 +189,23 @@ footer a:hover {
 #actions > button:hover {
     background-color: #e15bd6d5;
 }
+
+.shake {
+    animation: vibrate 0.7s linear infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 300px;
+}
+
+
+@keyframes vibrate {
+    0%, 20%, 40%, 60%, 80% {
+        transform: translate3d(-1px, 0, 0) rotate(-2deg);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translate3d(1px, 0, 0) rotate(2deg);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+}

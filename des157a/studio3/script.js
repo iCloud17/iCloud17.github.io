@@ -32,60 +32,84 @@
             return {
                 element: element,
                 value: value,
-                roll: function() {
-                    this.element.classList.remove('one');
-                    let rolled = Math.floor(Math.random() * 6) + 1;
-                    if(rolled == 1) {
+                shake: function() {
+                    this.element.classList.add('shake');
+                    setTimeout(() => {this.element.classList.remove('shake');}, 250);
+                },
+                checkOne: function() {
+                    if(this.value == 1) {
                         this.element.classList.add('one');
                     }
-                    this.value = rolled;
+                },
+                roll: function(toShake = false, detectOne = false) {
+                    this.element.classList.remove('one');
+                    this.value = Math.floor(Math.random() * 6) + 1;
                     this.element.innerText = `${this.value}`;
-                    return rolled;
-                }
+                    if(detectOne) {
+                        this.checkOne();
+                    }
+                    if(toShake) {
+                        this.shake();
+                    }
+                    return this.value;
+                },
             }
         }
 
-        let turn = true;
-        const player1 = new Player('p1');
-        const player2 = new Player('p2');
-        const turnMsg = document.querySelector('.turn h4');
+        let turn = 0;
+        const winningThreshold = 30;
+        const player = [new Player('p1'), new Player('p2')]
+        const msg = document.querySelector('.turn h4');
         const dice = document.querySelectorAll('.dice');
         const die1 = Dice(dice[0]);
         const die2 = Dice(dice[1]);
+        const actions = this.document.getElementById('actions');
         const roll = document.getElementById("roll");
         const pass = document.getElementById("pass");
         const restart = document.getElementById("restart");
 
         function switchTurns() {
-            turn = !turn;
-            if(turn) {
-                turnMsg.innerText = "Player 1's Turn";
-            } else {
-                turnMsg.innerText = "Player 2's Turn";
-            }
-            player1.toggleActivity();
-            player2.toggleActivity();
+            turn = (turn + 1) % 2;
+            msg.innerText = `Player ${turn + 1}'s Turn`;
+            player[0].toggleActivity();
+            player[1].toggleActivity();
         }
 
-        function currentPlayer() {
-            if(turn)
-                return player1;
-            else
-                return player2;
+        function checkWinner() {
+            if(player[turn].score >= winningThreshold) {
+                actions.removeChild(roll);
+                actions.removeChild(pass);
+                msg.innerText = `Player ${turn + 1} Wins!!! ＼(^o^)／`;
+            }
         }
         
+        let rolling = false;
+        let rollingInterval;
         roll.addEventListener('click', function() {
-            let curPlayer = currentPlayer();
-            die1.roll();
-            die2.roll();
-            if(die1.value == 1 && die2.value == 1) {
-                curPlayer.setPoints(0);
-                switchTurns();
-            } else if(die1.value == 1 || die2.value == 1) {
-                switchTurns();
+            if(rolling) {
+                clearInterval(rollingInterval);
+                roll.innerText = 'Roll';
+                die1.checkOne();
+                die1.shake();
+                die2.checkOne();
+                die2.shake();
+                if(die1.value == 1 && die2.value == 1) {
+                    player[turn].setPoints(0);
+                    switchTurns();
+                } else if(die1.value == 1 || die2.value == 1) {
+                    switchTurns();
+                } else {
+                    player[turn].addPoints(die1.value + die2.value);
+                    checkWinner();
+                }
             } else {
-                curPlayer.addPoints(die1.value + die2.value);
+                roll.innerText = 'Stop';
+                rollingInterval = setInterval(function() {
+                    die1.roll();
+                    die2.roll();
+                }, 100);
             }
+            rolling = !rolling;
         });
 
         pass.addEventListener('click', function() {
@@ -94,6 +118,7 @@
 
         restart.addEventListener('click', function() {
             location.reload();
+            turn = 0;
         })
 
     });
