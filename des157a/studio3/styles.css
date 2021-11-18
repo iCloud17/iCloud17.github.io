@@ -50,20 +50,24 @@ header, main, footer {
 header {
     font-family: 'Aclonica';
     color: #e15bd6;
-    font-size: 1.5em;
+    font-size: 1.75em;
+}
+
+header > h1 {
+    margin-bottom: 0;
 }
 
 #instructions {
     margin: 0 0 2% 0;
     font-family: 'Ink Free';
     color: white;
-    font-size: 1.15em;
+    font-size: 1.25em;
     letter-spacing: 0.07em;
     line-height: 1.25em;
 }
 
 #instructions > div{
-    width: 70%;
+    width: 75%;
     text-align: justify;
 }
 
@@ -168,10 +172,10 @@ footer a:hover {
     background-color: #ff4b3162;
 }
 
-.centerStuff > button {
+#actions > button {
     outline: 0;
     background-color: #e15bd681;
-    border-radius: 10%;
+    border-radius: 5%;
     border: 2px solid #cccccc;
     color: #eeeeee;
     text-align: center;
@@ -182,6 +186,6 @@ footer a:hover {
     width: 20%;
 }
 
-.centerStuff > button:hover {
+#actions > button:hover {
     background-color: #e15bd6d5;
 }
