@@ -135,7 +135,7 @@
             playAudio(actionAudio);
             location.reload();
             turn = 0;
-        })
+        });
 
     });
 
