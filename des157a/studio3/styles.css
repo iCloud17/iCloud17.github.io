@@ -16,6 +16,8 @@ html {
     width: 100vw;
     padding: 0;
     background-color: #242424;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 body {
@@ -33,7 +35,7 @@ body {
 }
 
 html, body {
-    overflow: hidden;
+    /* overflow: hidden; */
     margin: 0;
 }
 
@@ -83,7 +85,7 @@ header > h1 {
 }
 
 footer {
-    padding: 3%;
+    padding: 0.5% 1% 0 1%;
 }
 
 footer a {
