@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <title>Design Comp</title>
+    <style>
+
+        html, body {
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <img src="images/finalGameIntro.jpg" alt="Final Game Introduction">
+
+    <script>
+        (function () {
+            "use strict";
+            console.log('using js');
+            let images = ["images/finalGameIntro.jpg", "images/finalGame.jpg", "images/finalGameEnd.jpg"];
+            let curImage = 0;
+            let imgEle = document.querySelector('img');
+            imgEle.addEventListener('click', function() {
+                curImage = (curImage + 1) % images.length;
+                imgEle.src = images[curImage];
+            });
+        }());
+    </script>
+
+</body>
+</html>

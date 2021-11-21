@@ -1,0 +1,111 @@
+/* ---------------------------SETTING UP PAGE--------------------------- */
+body{
+    color: #fff;
+    font-family: 'Nunito Semibold';
+    background-color: #242424;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    max-width: 1366px;
+    margin: 1% auto;
+    padding: 20px;
+    border: black 2px solid;
+    border-radius: 2%;
+    box-shadow: 0 0 30px #000000;
+}
+
+#content > *{
+    margin: 5px;
+    padding: 5px;
+}
+
+.flexer {
+    flex: 2;
+}
+
+header{
+    flex: 1;
+}
+
+main{
+    flex: 2;
+}
+
+footer {
+    flex: 1;
+    padding: 0.5% 1% 0 1%;
+}
+
+footer a {
+    text-align: center;
+    color: white;
+    display: block;
+    font-size: 17px;
+    padding: 1%;
+    border: 3px solid transparent;
+    border-radius: 2px;
+    text-decoration: none;
+    float: right;
+}
+
+footer a:hover {
+    border: 3px solid #187599;
+    text-decoration: underline;
+}
+
+/* ---------------------------GRID CSS--------------------------- */
+
+#gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
+    font-size: 1.05em;
+    gap: 10px;
+    text-align: justify;
+}
+
+#gridContainer > * {
+    border-radius: 2%;
+    border: 5px solid;
+    padding: 3%;
+}
+
+#cp1 {
+    grid-column: 1 / 2;
+    background: #07455e85;
+    border-color: #07455e;
+}
+
+#cp2 {
+    background: #3c637285;
+    border-color: #3c6372;
+}
+
+#pg {
+    background: #18759985;
+    border-color: #187599;
+}
+
+#ds {
+    background: #3682a085;
+    border-color: #3682a0;
+}
+
+#is {
+    background: #606e7485;
+    border-color: #606e74;
+}
+
+#eg {
+    background: #20394685;
+    border-color: #263e4b;
+}
