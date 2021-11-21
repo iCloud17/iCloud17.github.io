@@ -9,6 +9,7 @@ body{
 }
 
 h1 {
+    text-align: center;
     font-size: 2.5em;
 }
 
@@ -76,13 +77,26 @@ footer a:hover {
     letter-spacing: 0.075em;
     gap: 20px;
     text-align: justify;
+    /* align-items: center; */
 }
 
 #gridContainer > * {
     border-radius: 2%;
     border: 7px solid;
     padding: 3%;
-    transition: all 1s;
+    transition: all 0.75s;
+}
+
+#gridContainer section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gridContainer section a {
+    color: white;
+    text-decoration: underline;
+    font-style: italic;
 }
 
 #gridContainer > div:hover {
@@ -90,8 +104,13 @@ footer a:hover {
     opacity: 1;
 }
 
+#gridContainer figure {
+    margin: 0 auto;
+}
+
 #cp1 {
-    grid-column: 1 / 2;
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
     background: #07455e90;
     border-color: #04222e;
 }
@@ -101,12 +120,23 @@ footer a:hover {
 }
 
 #cp2 {
+    grid-column: 2 / 3;
+    grid-row: 4 / 6;
     background: #3c637290;
     border-color: #1d2f36;
 }
 
 #cp2:hover {
     background: #3c6372;
+}
+
+#ps {
+    background: #059bd690;
+    border-color: #034863;
+}
+
+#ps:hover {
+    background: #059bd6;
 }
 
 #pg {
@@ -125,6 +155,11 @@ footer a:hover {
 
 #ds:hover {
     background: #347792;
+}
+
+#bgclr:hover {
+    background-color: #242424;
+    cursor: pointer;
 }
 
 #is {
