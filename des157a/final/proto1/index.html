@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Focus Game</title>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div id="container">
+        <!-- <div class="spacer"></div> -->
+
+        <header>
+            <h1>Level <span id="lvl">1</span></h1>
+        </header>
+
+        <main>
+            <section id="gameStatus">
+                <p>Score: <span id="score">0</span></p>
+                <p>Time: <span id="time">60</span></p>
+            </section>
+    
+            <section id="actions">
+                <div>
+                    <button id="leftBtn"></button>
+                </div>
+                <div>
+                    <button id="rightBtn"> Left </button>
+                </div>
+            </section>
+        </main>
+    
+        <!-- <div class="spacer"></div>
+        <div class="spacer"></div> -->
+
+        <footer>
+            <div class="open">&#9432</div>
+        </footer>
+
+        <!-- <div class="spacer"></div> -->
+    </div>
+
+    <section id="overlay" class="showing">
+        <article id="instr" class="show">
+            <h2>Instructions</h2>
+            <p>
+                There will be two tiles that show up on the screen and the text will randomly show up on either side and will randomly be written as 'left' or 'right'. The challenge is to click on the box which has been written down. For example, if left is written down, no matter what box it appeared on, you have to click on the left tile. There will be a total timer countdown, try to get as many correct as possible in the given time. Have fun!
+            </p>
+            <button class="close">close</button>
+        </article>
+        <article id="over" class="hidden">
+            <h2>Game Over!!!</h2>
+            <p></p>
+            <button class="close">close</button>
+        </article>
+    </section>
+
+
+
+</body>
+
+</html>

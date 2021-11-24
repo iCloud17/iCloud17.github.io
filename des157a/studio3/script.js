@@ -96,6 +96,7 @@
         
         let rolling = false;
         let rollingInterval;
+
         roll.addEventListener('click', function() {
             playAudio(actionAudio);
             if(rolling) {
@@ -128,6 +129,13 @@
 
         pass.addEventListener('click', function() {
             playAudio(actionAudio);
+            if(rolling) {
+                clearInterval(rollingInterval);
+                roll.innerText = 'Roll';
+                die1.shake();
+                die2.shake();
+                rolling = false;
+            }
             switchTurns();
         });
 
