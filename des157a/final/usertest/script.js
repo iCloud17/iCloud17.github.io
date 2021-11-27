@@ -163,7 +163,7 @@
                 startTimer();
                 overlay.className = 'hidden';
             }
-            if(event.key.toLowerCase() === 'i') {
+            if(event.key.toLowerCase() === 'i' && curPage == 1) {
                 if(overlay.className === 'hidden') {
                     event.preventDefault();
                     overlay.className = 'showing';
