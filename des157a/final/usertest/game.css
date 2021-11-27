@@ -1,0 +1,60 @@
+#gameHead {
+    height: 20%;
+}
+
+#gameHead > h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+#gameMain {
+    height: 60%;
+}
+
+#gameStatus {
+    height: 15%;
+    font-size: 1.75em;
+}
+
+#actions {
+    height: 85%;
+}
+
+#gameMain > section {
+    display: flex;
+}
+
+#gameStatus > p, #actions > div {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+
+#actions > div > button{
+    width: 30%;
+    height: 100%;
+    font-size: 2em;
+}
+
+#leftBtn {
+    margin-left: 60%;
+}
+
+#rightBtn {
+    margin-right: 60%;
+}
+
+/* -------------------Footer CSS------------------- */
+
+#info div {
+    text-align: center;
+    color: white;
+    display: block;
+    font-size: 2em;
+    /* border: 2px solid orangered; */
+    border-radius: 100%;
+    text-decoration: none;
+    float: right;
+    margin-right: 3%;
+    cursor: pointer;
+}
