@@ -4,9 +4,12 @@
 
 #introHeader > h1 {
     display: block;
-    margin-top: 7%;
+    margin: 0;
+    padding: 5% 0 1% 0;
     text-align: center;
     font-size: 2.5em;
+    letter-spacing: 0.03em;
+    font-family: "Press Start 2P";
 }
 
 #instr {
@@ -21,8 +24,9 @@
     margin: 0 auto;
     font-size: 1.5em;
     text-align: justify;
-    line-height: 1.5em;
-    font-family: "Griffy";
+    line-height: 1.3em;
+    /* letter-spacing: 0.05em;
+    font-family: "Press Start 2P"; */
 }
 
 #playGame {
@@ -35,7 +39,9 @@
     border: 3px solid white;
     border-radius: 5%;
     color: white;
-    font-size: 3em;
+    font-size: 2em;
+    letter-spacing: 0.01em;
+    font-family: "Press Start 2P";
 }
 
 #playGame:hover {

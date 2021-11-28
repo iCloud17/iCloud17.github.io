@@ -8,7 +8,6 @@
         alert("Hello there! Thanks for testing my game today! I would like you to test a couple of things:\n-->Play the game as instructed\n-->Try opening the information popup on the bottom right of the screen when the game starts by either clicking on it or pressing the 'i' key and the timer should pause in the background.\n-->Try different ways of exiting the overlay-clicking anywhere except overlay, close button, escape key, 'i' key, etc.\n-->For one trial get a 0 score to see if that breaks the maths in the results page!-->\nAfter playing the game a couple of times, try and break it in any way you can think of!\nThanks again and have fun!");
 
         const pages = [document.getElementById('introduction'), document.getElementById('game'), document.getElementById('report')];
-        let curPage = 0;
         const play = document.getElementById('playGame');
         const playAgain = document.getElementById('again');
         const btns = document.querySelectorAll('#actions button');
@@ -18,6 +17,12 @@
         const openOverlay = document.querySelector('.open');
         const closeOverlay = document.querySelector('.close');
         const overlay = document.getElementById('overlay');
+        const audios = [new Audio('audio/mixkit-game-ball-tap-2073.wav'), new Audio('audio/mixkit-quick-jump-arcade-game-239.wav'), new Audio('audio/mixkit-negative-guitar-tone-2324.wav'), new Audio('audio/mixkit-bonus-extra-in-a-video-game-2064.wav')];
+        const actionAudio = 0;
+        const rightAudio = 1;
+        const wrongAudio = 2;
+        const gameOverAudio = 3;
+        let curPage = 0;
         const buttons = [];
         const directions = ['left', 'right'];
         let dir = 0;
@@ -31,11 +36,18 @@
         let rev = false;
         let timer;
 
+        function playAudio(index) {
+            audios.forEach((audio) => {audio.pause();});
+            audios[index].currentTime = 0;
+            audios[index].play();
+        }
+
         //#region Change Pages
 
         play.addEventListener('click', function(event) {
             event.preventDefault();
             document.body.className = 'pFadeOut';
+            playAudio(actionAudio);
             setTimeout(function() {
                 pages[curPage++].className = 'hidden';
                 pages[curPage].className = 'show';
@@ -46,6 +58,7 @@
 
         function gameOver() {
             document.body.className = 'pFadeOut';
+            playAudio(gameOverAudio);
             setTimeout(function() {
                 pages[curPage++].className = 'hidden';
                 pages[curPage].className = 'show';
@@ -57,6 +70,7 @@
 
         playAgain.addEventListener('click', function(event) {
             event.preventDefault();
+            playAudio(actionAudio);
             window.location.reload();
         });
 
@@ -92,16 +106,20 @@
                 if(rev) {
                     if (btn.id == dir) {
                         misses += 1;
+                        playAudio(wrongAudio);
                     } else {
                         score += 1;
                         setInnerTxt(scoreEle, score, 'white');
+                        playAudio(rightAudio);
                     }
                 } else {
                     if (btn.id == dir) {
                         score += 1;
                         setInnerTxt(scoreEle, score, 'white');
+                        playAudio(rightAudio);
                     } else {
                         misses += 1;
+                        playAudio(wrongAudio);
                     }
                 }
                 setInnerTxt(lvlEle, ++lvl, 'white');   
