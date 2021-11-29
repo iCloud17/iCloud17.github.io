@@ -5,7 +5,7 @@
 
     window.addEventListener('load', function() {
 
-        alert("Hello there! Thanks for testing my game today! I would like you to test a couple of things:\n-->Play the game as instructed\n-->Try opening the information popup on the bottom right of the screen when the game starts by either clicking on it or pressing the 'i' key and the timer should pause in the background.\n-->Try different ways of exiting the overlay-clicking anywhere except overlay, close button, escape key, 'i' key, etc.\n-->For one trial get a 0 score to see if that breaks the maths in the results page!-->\nAfter playing the game a couple of times, try and break it in any way you can think of!\nThanks again and have fun!");
+        alert("Hello there! Thanks for testing my game today! I would like you to test a couple of things:\n-->Play the game as instructed\n-->Try opening the information popup on the bottom right of the screen when the game starts by either clicking on it or pressing the 'i' key and the timer should pause in the background.\n-->Try different ways of exiting the overlay-clicking anywhere except overlay, close button, escape key, 'i' key, etc.\n-->For one trial get a 0 score to see if that breaks the maths in the results page!\n-->After playing the game a couple of times, try and break it in any way you can think of!\nThanks again and have fun!");
 
         const pages = [document.getElementById('introduction'), document.getElementById('game'), document.getElementById('report')];
         const play = document.getElementById('playGame');
