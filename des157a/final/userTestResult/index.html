@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>User Testing Feedback</title>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <main>
+            <h1>User Test Observations and Results</h1>
+
+            <section id="photos">
+                <figure>
+                    <img src="images/introPgr.jpg" alt="Introduction Image">
+                    <figcaption>Tester A on Introduction Page</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/gamePgr.jpg" alt="Game Image">
+                    <figcaption>Tester B on Game Page</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/reportPgr.jpg" alt="Report Image">
+                    <figcaption>Tester C on Report Page</figcaption>
+                </figure>
+            </section>
+            <section>
+                <h3>What did we do?</h3>
+                <p>
+                    For today's class, we had to test our projects by letting users blindly test the pages themselves as if they had stumbled upon the website on their own. We had to give them a set of goals to achieve while testing, and give us feedback accordingly. The
+                    feedback session was really informative and helpful in letting us know what works and what we need to work on. This page summarizes the feedback received from three users testing it and what changes I will incorporate into my final
+                    project.
+                </p>
+            </section>
+            <section>
+                <h3>Feedback</h3>
+                <p>
+                    There was a lot of constructive feedback given to me after the test was completed. Most of it I received from all three users was pretty similar and can be broadly classified as follows -
+                </p>
+                <ul>
+                    <li>
+                        <span>Unclear/Hard-to-understand Instructions</span> - During the testing,I had observed the users taking a bit of time to understand the instructions. A common feedback was that the instructions at the beginning of the game were a bit too wordy and hard to understand. The instructions did not give them a clear enough idea
+                        of what was going to come up and that it took them a while to truly understand what I was trying to convey.
+                    </li>
+                    <li>
+                        <span>Quit/Restart Game</span> - Once the game starts, the user has no way to exit the quit to the end to check their score report or just directly restart the game. The general opinion was it would be a good option to give a user
+                        an exit option so that they do not have to wait out the entire 30 seconds of the game before they can either restart or quit the game.
+                    </li>
+                    <li>
+                        <span>Feedback on Score Report</span> - The testers mentioned that they would have liked to see some visual feedback on the final page. It would be based on either their score or accuracy to know whether their performance was good
+                        or not, or at least print a message telling the user 'Good Job!' or to 'Try Harder Next Time!'.
+                    </li>
+                    <li>
+                        <span>Font matching</span> - Another suggestion I received was to change the instruction font style to match the retro-pixelated game look.
+                    </li>
+                    <li>
+                        <span>Partially Unclear Game Mechanics</span> - Since the game is randomized, sometimes the same word ('left' or 'right') may appear on the same tile in the next level as well, which can confuse the user as to whether the game is working or has been stalled. The suggestion was that I can change the game such that this confusion is avoided by either making sure the same combination does not repeat or having a better visual indicator of a level being passed.
+                    </li>
+                    <li>
+                        <span>Difficult to judge time</span> - A tester's feedback was that it was difficult to keep track of the time and realize that time is running low since there is no audio or visual feedback of time about to reach to zero. The suggestion was made to change the color of the time so that the user doesn't have to read the time but based on the color can guess how much time is left, which will let them focus on the game more.
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Changes I will Make</h3>
+                <p>
+                    The process of blind testing was really useful to let us know how a first-time user approaches our website. Taking the feedback and my own observations of the user testing process into account, these are the changes that I will definitely be making -
+                </p>
+                <ul>
+                    <li>
+                        <span>Clearer and Simpler Instructions</span> - Based on user feedback above, I will simplify the instructions language and also try to show it in a bullet point format for greater ease in understanding. I will also try and give them a visual representation of what is coming up by including a small doodle image of the game page and showing a correct example.
+                    </li>
+                    <li>
+                        <span>Quit/Restart</span> - I will add both a quit and restart button in the game page itself. Instead of waiting 30 seconds, the user will be able to either quit to the end screen or restart the game. This will probably be in the top left corner, away from other buttons to prevent the user accidentally clicking it.
+                    </li>
+                    <li>
+                        <span>Score Report Feedback</span> - I plan on adding visual feedback to the score report page based on user performance in the game. This will be done by changing the background color and adding a text depending on how well the user performance is. For example, a gold background for a really good score and a message saying "Good Job!".
+                    </li>
+                    <li>
+                        <span>Font Matching</span> - I will be changing the instruction text and score report text to match the retro byte game theme of the title and buttons.
+                    </li>
+                    <li>
+                        <span>Time Feedback</span> - I will use an animation on the timer css to change it from a white color to a red color which will allow the users to know that time is running out.
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <a target="_blank" rel="noopener noreferrer" href="https://validator.w3.org/check?uri=https://iCloud17.github.io/des157a/final/userTestResults">Validate HTML 5</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://jigsaw.w3.org/css-validator/validator?uri=https://icloud17.github.io/des157a/final/userTestResults">Validate CSS</a>
+        </footer>
+
+
+
+    </div>
+
+</body>
+
+</html>

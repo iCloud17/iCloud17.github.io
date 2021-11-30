@@ -1,0 +1,100 @@
+/* ---------------------------SETTING UP PAGE--------------------------- */
+
+html,
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #fff;
+    font-family: 'Nunito Semibold';
+    background-color: #09616d;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#container {
+    width: 100%;
+    max-width: 1366px;
+    position: relative;
+    align-self: auto;
+    margin: 3% auto;
+    background-color: #56c6e29a;
+    border: rgba(0, 0, 0, 0.527) 2px solid;
+    box-shadow: 0 0 30px #000000;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 3% 10%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: auto;
+}
+
+main>section {
+    width: 100%;
+}
+
+#photos {
+    display: flex;
+}
+
+#photos > figure {
+    flex: 1;
+}
+
+main>h1 {
+    font-size: 2.75em;
+}
+
+section>h3 {
+    font-size: 1.5em;
+    margin: 0.5em auto 0 auto;
+}
+
+section>p {
+    margin-top: 0.5em;
+    font-size: 1.25em;
+    line-height: 1.25em;
+}
+
+ul>li {
+    font-size: 1.15em;
+    line-height: 1.25em;
+    margin-top: 0.5em;
+}
+
+li>span {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+footer {
+    width: 100%;
+    margin: 0 1% 2% 1%;
+}
+
+footer a {
+    display: inline-block;
+    padding: 5px;
+    border: 3px solid transparent;
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+}
+
+footer a:hover {
+    border: 3px solid #ffffff;
+}
