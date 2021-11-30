@@ -55,7 +55,7 @@
                 pages[curPage++].className = 'hidden';
                 pages[curPage].className = 'show';
                 document.body.className = 'pFadeIn';
-                // setTimeout(startTimer, 500);
+                setTimeout(startTimer, 500);
             }, 500);
         });
 
