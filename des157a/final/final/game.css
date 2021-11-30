@@ -1,0 +1,124 @@
+#game > section {
+    position: relative;
+}
+
+#gameHead {
+    height: 17.5%;
+}
+
+#gameHead > h1 {
+    text-align: center;
+    font-size: 2.5em;
+    letter-spacing: 0.03em;
+    font-family: "Press Start 2P";
+    padding-top: 5%;
+}
+
+#gameMain {
+    height: 60%;
+}
+
+#gameStatus {
+    height: 15%;
+    font-size: 1.75em;
+    letter-spacing: 0.03em;
+    font-family: "VT323";
+    margin-bottom: 1%;
+}
+
+#gameStatus > div > p {
+    width: fit-content;
+    border: 3px solid white;
+    border-radius: 3%;
+    margin: 0 auto;
+    padding: 1%;
+    text-align: center;
+}
+
+#gameStatus > div > #scorer {
+    margin-left: 50%;
+}
+
+#gameStatus > div > #timer {
+    margin-right: 50%;
+}
+
+#timer {
+    animation: timeout 30s linear forwards;
+    animation-play-state: paused;
+}
+
+@keyframes timeout {
+    0% {
+        color: white;
+        border-color: white;
+    }
+    100% {
+        color: rgb(255, 141, 141);
+        border-color: rgb(201, 5, 5);
+        background-color: rgba(201, 5, 5, 0.308);
+    }
+}
+
+#gameStatus > p > div > span {
+    font-size: 1.25em;
+}
+
+#actions {
+    height: 85%;
+}
+
+#gameMain > section {
+    display: flex;
+}
+
+#gameStatus > div, #actions > div {
+    flex: 5;
+    text-align: center;
+    margin: 0;
+}
+
+#gameStatus > #quit {
+    flex: 1;
+}
+
+#actions > div > button{
+    width: 30%;
+    height: 100%;
+    font-size: 2.75em;
+    font-family: "VT323";
+}
+
+#leftBtn {
+    margin-left: 60%;
+}
+
+#rightBtn {
+    margin-right: 60%;
+}
+
+/* -------------------Footer CSS------------------- */
+
+#info {
+    margin: 3% 3% 0 3%;
+}
+
+#info > button {
+    width: fit-content;
+    padding: 0.5%;
+    height: 100%;
+    font-size: 1.25em;
+    font-family: "VT323";
+}
+
+#info div {
+    text-align: center;
+    color: white;
+    display: block;
+    font-size: 2em;
+    /* border: 2px solid orangered; */
+    border-radius: 100%;
+    text-decoration: none;
+    float: right;
+    cursor: pointer;
+}

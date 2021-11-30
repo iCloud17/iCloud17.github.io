@@ -1,0 +1,53 @@
+#introHeader {
+    flex: 1;
+}
+
+#introHeader > h1 {
+    display: block;
+    margin: 0;
+    padding: 5% 0 2% 0;
+    text-align: center;
+    font-size: 2.5em;
+    letter-spacing: 0.03em;
+    font-family: "Press Start 2P";
+}
+
+#instr {
+    flex: 3;
+    text-align: center;
+    position: relative;
+}
+
+#instr > p {
+    display: block;
+    max-width: 60%;
+    margin: 0 auto;
+    font-size: 1.75em;
+    text-align: justify;
+    line-height: 1.3em;
+    letter-spacing: 0.01em;
+    font-family: "VT323";
+}
+
+#playGame {
+    display: block;
+    width: fit-content;
+    margin: 5% auto;
+    padding: 1% 3%;
+    text-decoration: none;
+    outline: 3px solid transparent;
+    border: 3px solid white;
+    border-radius: 5%;
+    color: white;
+    font-size: 2em;
+    letter-spacing: 0.01em;
+    font-family: "Press Start 2P";
+}
+
+#playGame:hover {
+    /* font-weight: bold; */
+    outline-color: white;
+    animation: none;
+}
+
+

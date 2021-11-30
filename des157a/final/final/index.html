@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head class>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="intro.css" />
+    <link rel="stylesheet" type="text/css" href="game.css" />
+    <link rel="stylesheet" type="text/css" href="report.css" />
+    <title>Focus Game</title>
+    <script src="script.js" defer></script>
+</head>
+
+<body class>
+
+    <div id="container">
+
+        <main id="pages">
+            <section id="introduction" class="show">
+    
+                <section id="introHeader">
+                    <h1>Focus Game</h1>
+                </section>
+        
+                <section id="instr" class="show">
+                    <p>
+                        Lets see how focused you really are! There will be two tiles that show up on the screen and the text will randomly show up on either side and will randomly be written as 'left' or 'right'. The challenge is to click on the box which has been written down. For example, if left is written down, no matter what box it appeared on, you have to click on the left tile. If the text is written in <strong style="color: rgb(201, 5, 5);">red</strong>, then you have to do the <span style="font-style: italic; text-decoration: underline;">opposite</span> of what is written! So if <strong style="color: rgb(201, 5, 5);">left</strong> is written, then you have to click the <span style="font-style: italic; text-decoration: underline;">right</span> tile. There will be a total timer countdown, so try to get as many correct as possible in the given time. Have fun!
+                    </p>
+                    <a class="pulse" id="playGame" rel="noopener noreferrer" href="">Play</a>
+                </section>
+        
+            </section>
+
+            <section id="game" class="hidden">
+
+                <section id="gameHead">
+                    <h1>Level <span id="lvl">1</span></h1>
+                </section>
+        
+                <section id="gameMain">
+                    <section id="gameStatus">
+                        <div><p id="scorer">Score: <span id="score">0</span></p></div>
+                        <div><p id="timer">Time: <span id="time">60</span></p></div>
+                    </section>
+            
+                    <section id="actions">
+                        <div>
+                            <button id="leftBtn"></button>
+                        </div>
+                        <div>
+                            <button id="rightBtn"> Left </button>
+                        </div>
+                    </section>
+                </section>
+            
+                <!-- <div class="spacer"></div>
+                <div class="spacer"></div> -->
+        
+                <section id="info">
+                    <button id="quit">Exit Game</button>
+                    <div class="open">&#9432;</div>
+                </section>
+            </section>
+            
+            <section id="report" class="hidden">
+                <article id="over">
+                    <h1>Score Report</h1>
+                    <p></p>
+                    <a class="pulse" id="again" rel="noopener noreferrer" href="">Play Again!</a>
+                </article>
+            </section>
+        </main>
+    
+        <section id="overlay" class="hidden">
+            <article id="overlayArticle">
+                <h2>Instructions</h2>
+                <p>
+                    Lets see how focused you really are! There will be two tiles that show up on the screen and the text will randomly show up on either side and will randomly be written as 'left' or 'right'. The challenge is to click on the box which has been written down. For example, if left is written down, no matter what box it appeared on, you have to click on the left tile. If the text is written in <strong style="color: rgb(201, 5, 5);">red</strong>, then you have to do the <span style="font-style: italic; text-decoration: underline;">opposite</span> of what is written! So if <strong style="color: rgb(201, 5, 5);">left</strong> is written, then you have to click the <span style="font-style: italic; text-decoration: underline;">right</span> tile. There will be a total timer countdown, so try to get as many correct as possible in the given time. Have fun!
+                </p>
+                <button class="close" style="float: right;">Close</button>
+            </article> 
+        </section>
+
+        <footer>
+            <a target="_blank" rel="noopener noreferrer" href="https://validator.w3.org/check?uri=https://iCloud17.github.io/des157a/final/usertest">Validate HTML 5</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://jigsaw.w3.org/css-validator/validator?uri=https://icloud17.github.io/des157a/final/usertest">Validate CSS</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://mixkit.co/free-sound-effects/game/">Audio Sources</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://mixkit.co/license/#sfxFree">Audio License</a>
+        </footer>
+
+        
+
+    </div>
+
+</body>
+
+</html>
